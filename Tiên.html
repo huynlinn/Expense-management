@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta http-equiv="X-UA-Compatible" 
+        content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=3.0">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+        <tittle>My Profile</tittle>
+        
+    </head>
+    <body>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap');
+            @import url(https://fontawesome.com/icons/bars?s=solid&f=classic);
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat',sans-serif;
+    box-sizing: border-box;
+}
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://tse1.mm.bing.net/th?id=OIP.igFo90nftN5LjMIj_Rw-xgHaEK&pid=Api&P=0);
+    background-size: cover;
+    background-position:center ;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.logo{
+    color: white;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+span{
+    color: #113FBD;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+nav ul li a:hover{
+    color:#113FBD;
+    transition: .4s;
+}
+.btn{
+    background-color: #113FBD;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px; 
+    transition: transform .4s; 
+}
+.btn:hover{
+    transform: scale(1.2);
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+h1{
+    color: white ;
+    margin: 20px 0px 20px;
+    font-size: 75px;
+    left:100px;
+}
+h3{
+    color: white;
+    font-size: 25px;
+    margin-bottom: 50px;
+    left:100px;
+}
+h4{
+    color: #fcfc;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.newslatter form{
+    width: 380px;
+    max-width: 100%;
+    position: relative;
+}
+.newslatter form input:first-child{
+    display: inline-block;
+    width: 100%;
+    padding: 14px 130px 14px 15px;
+    border: 2px solid #113FBD;
+    outline: none;
+    border-radius: 30px;
+}
+.newslatter form input:last-child{
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: #113FBD;
+    color: white;
+    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+    top: 6px;
+    right: 6px;
+}
+.about{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: black;
+}
+.about img{
+    height: auto;
+    width: 430px;
+}
+.about-text{
+    width: 550px;
+}
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about-text h2{
+    color: white ;
+    font-size: 60px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.about-text h5{
+    color: white;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+.about-text p{
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+button{
+    background-color: #113FBD;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding:13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+button:hover{
+    background-color: transparent;
+    border: 2px solid #113FBD;
+    cursor: pointer;
+}
+.service{
+    background: #101010;
+    width: 100%;
+    padding: 100px 0px;
+}
+.title h2{
+    color: white;
+    font-size: 75px;
+    width: 1130px;
+    margin: 30ox auto;
+    text-align: center;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+.card{
+    height: 360px;
+    width: 335px;
+    padding: 20px 35px;
+    background: #191919;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.card i{
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 25px 0px;
+    color: #113FBD;
+}
+h5{
+    color: white;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+.pra p{
+    color: #fcfc;
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 25px;
+}
+.card .button{
+    background-color: #113FBD;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding:9px 22px;
+    border-radius: 30px;
+    transition: .4s;
+}
+.card .button:hover{
+    background-color: transparent;
+    border: 2px solid #113FBD;
+    cursor: pointer;
+}
+.contact-me{
+    width: 100%;
+    height: 290px;
+    background: #191919;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact-me p{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.contact-me .button-two{
+    background-color: #113FBD;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding:13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+.contact-me .button-two:hover{
+    background-color: transparent;
+    border: 2px solid #113FBD;
+    cursor: pointer;
+}
+.content_all_box {
+    border: 1px solid;
+    max-width: 600px;
+    background-color: #b4c9c9;
+}
+
+.setHeader {
+    display: flex;
+    height: 200px;
+    width: 100%;
+}
+
+.set_all_avt {
+    padding: 15px 0px 0 15px;
+}
+
+.box_text_first {
+    padding-left: 0px;
+    padding-top: 10%;
+    width: 100%;
+}
+
+.avatar_Profile {
+    border-radius: 50%;
+    border: 3px solid #000000;
+    height: 85%;
+}
+
+/* định dạng chữ */
+
+h3 {
+    text-align: center;
+    color: #000000;
+}
+
+
+
+.text-first {
+    font-weight: 550;
+    font-size: 16px;
+    color: white ;
+}
+
+.text-last {
+    font-weight: 550;
+    font-size: 16px;
+    color: red;
+}
+
+/* liên hệ */
+
+.contact-all {
+    display: flex;
+    justify-content: center;
+}
+
+.contact_chung {
+    font-size: 20px;
+}
+
+.contact_chung-child {
+    padding: 0 20px 10px 20px;
+}
+
+.editContact-fb {
+    color: #0058a4;
+}
+
+.editContact-ytb {
+    color: red;
+}
+
+.editContact-tt {
+    color: #000000;
+}
+
+/* thanh phần trăm kỹ năng */
+/* định dạng cho thẻ bao bọc các thẻ skill */
+.container {
+    width: 100%;
+    background-color: #ddd;
+    padding: 0;
+}
+.cv{
+    background-color: #000;
+}
+
+/* định dạng chung cho thẻ hiển thị skill */
+.skills {
+    text-align: right;
+    padding-right: 10px;
+    line-height: 40px;
+    color: white;
+}
+
+/* định dạng cho từng skill theo số liệu */
+.html {
+    width: 100%;
+    background-color: #4CAF50;
+}
+
+.css {
+    width: 80%;
+    background-color: #2196F3;
+}
+
+.js {
+    width: 40%;
+    background-color: #f44336;
+}
+
+.dinhdangpt {
+    margin-bottom: 20px;
+}
+
+.tailieuhoc {
+    border: 1px solid;
+    width: 100%;
+    text-align: center;
+    background-color: beige;
+    margin-bottom: 5px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.tailieuhoc a {
+    color: red;
+    font-size: 18px;
+    font-weight: 550;
+}
+
+/* responsive mobile */
+
+@media screen and (max-width: 800px) {
+    .content_all_box {
+        margin-top: 0;
+    }
+
+    .content_all_box {
+        min-width: 600px;
+    }
+}
+        </style>
+         <div class="hero">
+            <nav>
+                <h2 class="logo">Pro<span>file</span></h2>
+                <ul>
+                    <li><a href="me.html">Home</a></li>
+                    
+                    <li><a href="#">Help</a></li>
+                    
+                </ul>
+                <a href="https://www.facebook.com/tien.luc.397501/" class="btn">Facebook</a>
+            </nav>
+
+            <div class="content">
+                <h4>Hello everyone. My name's</h4>
+                <h1>Thủy <span>Tiên</span></h1>
+                <h3>I'm a Sophomore,</h3>
+                <h3>study at pedagogical university.</h3>
+                <div class="newslatter">
+                    <form>
+                        <input type="email" name="email" id="email" placeholder="Enter your comment!">
+                        <input type="submit" name="submit" value="Send">
+                    </form>
+                </div>
+            </div>
+         </div>
+
+         <!---about section start--->
+         <section class="about">
+            <div class="main">
+                <img src="img/Tiêntcn.jpg" alt="ava">
+                <div class="about-text">
+                    <h2>About me</h2>
+                    <h5>Sophomore</h5>
+                    <p>Gentle, quiet, kind.<br>
+                    A student with no work experience. I am in the process of learning and seeking knowledge from friends and teachers.</p>
+                    
+                    <button type="button" href> Let's go!!!</button>
+                </div>
+            </div>
+         </section>
+
+         <!--service section start-->
+         <div class="service">
+            <div class="title">
+                <h2 id="Ser"></h2>
+            </div>
+
+            <div class="box">
+                <div class="card">
+                    <i class="fa-brands fa-youtube"></i>
+                    <h5>Web Development</h5>
+                    <div class="pra">
+                        <p>................................................................</p>
+                        <p style="text-align: center;">
+                            <a class="button" href="#">Read more</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    <h5>Help</h5>
+                    <div class="pra">
+                        <p>................................................................</p>
+                        <p style="text-align: center;">
+                            <a class="button" href="#">Read more</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-users"></i>
+                    <h5>User</h5>
+                    <div class="pra">
+                        <p>................................................................</p>
+                        <p style="text-align: center;">
+                            <a class="button" href="#">Read more</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+         </div>
+         <!--Contact me-->
+         <div class="contact-me">
+            <p >Let's me get you a useful service</p>
+            <!---<a class="button-two" href="">Hire me</a> --->
+            <button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello everyone!'">Click Me!</button>
+            <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click me to display Date and Time.</button><p id="demo"></p>
+         </div>
+
+         <div class="cv">
+         <div class="col-md-8 box_text_first">
+            <div class="setuptext-all">
+                <span class="text-first">Tên: </span>
+                <span class="text-last">Lục Thị Thủy Tiên</span>
+            </div>
+            <div class="setuptext-all">
+                <span class="text-first">Ngày sinh: </span>
+                <span class="text-last">27/10/2003</span>
+            </div>
+            <div class="setuptext-all">
+                <span class="text-first">Tuổi: </span>
+                <span class="text-last">20</span>
+            </div>
+        </div>
+
+        <div>
+            <div class="setuptext-all">
+                <span class="text-first">Quê quán: </span>
+                <span class="text-last">Củ Chi</span>
+            </div>
+            <div class="setuptext-all">
+                <span class="text-first">Sống tại: </span>
+                <span class="text-last">Thành phố Hồ Chí Minh</span>
+            </div>
+            <div class="setuptext-all">
+                <span class="text-first">Học và làm việc tại: </span>
+                <span class="text-last">Thành phố Hồ Chí Minh</span>
+            </div>
+            <div class="setuptext-all">
+                <span class="text-first">Học vấn: </span>
+                <span class="text-last">Sinh viên năm 2 Đại Học</span>
+            </div>
+            <div class="setuptext-all">
+                <span class="text-first">Khoa: </span>
+                <span class="text-last">Công nghệ thông tin</span>
+            </div>
+            <!--<div class="setuptext-all">
+                <span class="text-first">Chuyên ngành: </span>
+                <span class="text-last">Trí tuệ nhân tạo</span>
+            </div>-->
+            <div class="setuptext-all">
+                <span class="text-first">Khóa: </span>
+                <span class="text-last">2021-2025</span>
+            </div>
+            <hr>
+            <div class="setuptext-all">
+                <span class="text-first">Email: </span>
+                <span class="text-last">lucthithuytien27102003@gmail.com</span>
+            </div>
+            <div class="setuptext-all">
+                <span class="text-first">Phone : </span>
+                <span class="text-last">086890****</span>
+            </div>
+        </div>
+        </div>
+    <script>
+        document.getElementById("Ser").innerHTML = "Our Group";
+        document.getElementById('demo').innerHTML = 'Hello everyone!';
+        document.getElementById('demo').innerHTML = Date();
+    </script>
+    </body>
+</html>
+    

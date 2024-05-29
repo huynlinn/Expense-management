@@ -1,0 +1,43 @@
+#menu {
+  padding-right: 200px;
+  color: #dddddd;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  float: right;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a {
+  font-size: 16px;
+  text-decoration: none;
+  padding: 0 20px;
+  font-family: Arial;
+  color: deepskyblue;
+  line-height: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+}
+nav ul li ul {
+  position: absolute;
+
+  display: none;
+  width: 110%;
+}
+nav ul li ul li a {
+  line-height: 30px;
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+nav ul li a:hover {
+  font-weight: bold;
+  background-color: #dddddd;
+  height: fit-content;
+  border-radius: 5px;
+}

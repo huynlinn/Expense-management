@@ -1,0 +1,256 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #40513b;
+}
+#main-div{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height:200px;
+  background-color: #40513b;
+}
+
+#sidebar{
+  display: flex;
+  flex-direction: row;
+  width:29.5%;
+  background-color: #40513b;
+ 
+}
+#sidebar p{
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    top:35%;
+    left: 110px;
+    color: aliceblue;
+  }
+  .avt{
+    border-radius: 50%;
+        position: absolute;
+        height:30%;
+        width:auto;
+        margin-left: 49px;
+        top :20px;
+  }
+  #menu{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    border-radius: 50px;
+  
+    background-color: white;
+  }
+  
+nav ul{
+
+    padding:0; margin:0;
+    list-style:none;
+     float:right;
+     
+  }   
+  nav ul li{
+    float:left;
+    position:relative; 
+  }   
+  nav ul li a{
+    text-decoration:none;
+    padding:0 20px;
+    font-family:Arial;
+    color:black;
+    line-height:50px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+  
+  }
+  nav ul li ul{
+    position:absolute;
+  
+    display:none; width:110%;
+  }
+  nav ul li ul li a{
+    line-height:30px;
+    display:block;
+    text-align:left;
+    width:100%;
+  }
+  nav ul li a:hover{ 
+    font-weight:bold;
+    background-color:#dddddd;
+    height: fit-content;
+    border-radius: 5px;
+  }
+  nav ul li ul li a:hover{ font-weight:bold; }
+  nav ul li:hover ul{ display:block; 
+     }
+#date label{
+        font-family: Arial, Helvetica, sans-serif;
+       top: 10%;
+       margin-left:40px;
+       font-size: 16px;
+       text-decoration: none;
+       line-height: 25px;
+       font-weight: bold;
+       position: relative;
+        
+}
+#data{
+    position: relative;
+    margin-top:20px;
+}
+#title{
+    display: flex;
+}
+.ctent1{
+    position: relative;
+    top:20px;
+    left:70px;
+    background-color: #609966;
+    padding: 5px 5px;
+}
+.ctent2{
+    position: relative;
+    top:20px;
+    left:270px;
+    background-color: #609966;
+    padding: 5px 5px;
+}
+.ctent3{
+    position: relative;
+    top:20px;
+    left:470px;
+    background-color: #609966;
+    padding: 5px 5px;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 120px;;
+}
+
+.chart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.slice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  clip: rect(0, 100px, 200px, 0);
+  transform-origin: center;
+}
+
+.slice.food {
+  background-color: #ff6384;
+  transform: rotate(0deg);
+}
+
+.slice.transportation {
+  background-color: #36a2eb;
+  transform: rotate(36deg);
+}
+
+.slice.clothes {
+  background-color: #8bc34a;
+  transform: rotate(108deg);
+}
+
+.slice.contact-fee {
+  background-color: #795548;
+  transform: rotate(252deg);
+}
+
+.slice.education {
+  background-color: #ff5722;
+  transform: rotate(288deg);
+}
+
+.slice.electric-bill {
+  background-color: #3f51b5;
+  transform: rotate(324deg);
+}
+
+.label, .percent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.percent {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+/* CSS for chart legend */
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.chart-legend ul {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  list-style: none;
+  padding: 0;
+}
+
+.chart-legend li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+  margin-right: 20px;
+}
+
+.legend-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.legend-icon.food {
+  background-color: #ff6384;
+}
+
+.legend-icon.transportation {
+  background-color: #36a2eb;
+}
+
+.legend-icon.clothes {
+  background-color: #8bc34a;
+}
+
+.legend-icon.contact-fee {
+  background-color: #795548;
+}
+
+.legend-icon.education {
+  background-color: #ff5722;
+}
+
+.legend-icon.electric-bill {
+  background-color: #3f51b5;
+}
+  

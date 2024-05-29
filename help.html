@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="help.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <title>Help</title>
+</head>
+<body>
+    <div id="background">
+        <div id="centerbg">
+           <label>SUPPORT</label>
+           <form onsubmit="sendEmail(); reset(); return false;">
+                <!--<i class="fa-solid fa-envelope"></i>-->
+                <input type="email" placeholder="Email" name="email" id="email" required>
+			
+              <!-- <i class="fa-solid fa-lock"></i>--> 
+              <textarea placeholder="How can we help you?" rows="10" id="box"  required></textarea>
+               
+              <button class="btnsend" >Send</button>
+			</form>
+     
+           <hr  width="100%"  color="#609966" size="0.5px" />
+        
+            <!--<div onclick="myFunction() " >
+                <i class="fa-sharp fa-solid fa-play"></i>
+                <p1>What is this web use for?             </p1>
+            </div>
+            
+
+            <div id="myDIV">
+              JavaScript, theo phiên bản hiện hành, là một ngôn ngữ lập trình
+              kịch bản dựa trên đối tượng được phát triển từ các ý niệm nguyên mẫu.
+              Ngôn ngữ này được dùng rộng rãi cho các trang web, nhưng cũng được 
+              dùng để tạo khả năng viết script sử dụng các đối tượng nằm sẵn trong các ứng dụng.
+            </div>
+            <div onclick="myFunction1() " >
+                <i class="fa-sharp fa-solid fa-play"></i>
+                <p1>What is this web use for?             </p1>
+            </div>
+            
+
+            <div id="myDIV1">
+              JavaScript, theo phiên bản hiện hành, là một ngôn ngữ lập trình
+              kịch bản dựa trên đối tượng được phát triển từ các ý niệm nguyên mẫu.
+              Ngôn ngữ này được dùng rộng rãi cho các trang web, nhưng cũng được 
+              dùng để tạo khả năng viết script sử dụng các đối tượng nằm sẵn trong các ứng dụng.
+            </div>-->
+       <div class="container">
+              <p1> Basic question</p1>
+              <!--câu 1-->
+              <button type="button" class="collapsible"> What is this web use for?</button>
+                 <div class="content">
+               <p>Expense personal management" web is an online platform that helps users manage their personal expenses. This platform provides a variety of tools and features to help users track their expenses, create budgets, and analyze their spending habits. Users can easily input their expenses into the system, categorize them, and monitor their overall financial health. The platform also offers personalized recommendations and tips to help users save money and achieve their financial goals.</p2>
+              </div>
+              <!--câu 2-->
+                <button type="button" class="collapsible">Can I change the interface color?</button>
+              <div class="content">
+               <p>No, this functionality is not currently available, we will update it later</p>
+              </div>
+               <!--câu3 -->
+              <button type="button" class="collapsible">Is it possible to use e-wallet link?</button>
+              <div class="content">
+               <p>No, this functionality is not currently available, we will update it later</p>
+              </div>
+                <!--câu 4-->
+               <button type="button" class="collapsible">Can get monthly statistics via gmail?</button>
+              <div class="content">
+               <p>No. but you can see the stats at:
+                Dashboard (allows to see total spending for 30 days) or Monthwise (monthly statistics)</p>
+              </div>
+               
+              <!-- câu-->
+              <button type="button" class="collapsible">What should I do if I forgot my password</button>
+              <div class="content">
+               <p>You can retrieve your password if you enter the correct email and phone number before at the forgot password page</p>
+              </div>
+              <!-- câu-->
+              <button type="button" class="collapsible">Can i undo deleted history?</button>
+              <div class="content">
+               <p>
+                Yes . User can delete by going to Expenses->Manage Expenses. Then, click delete in the item you want to delete</p>
+              </div>
+              <!-- câu-->
+              <button type="button" class="collapsible">Is there a fee to use the website?</button>
+              <div class="content">
+               <p>This site is completely free</p>
+              </div>
+              <!-- câu-->
+              <button type="button" class="collapsible">How to create an account?</button>
+              <div class="content">
+               <p>You can create a new account by filling in the necessary information on the Register page</p>
+              </div>
+        </div>
+        </div>
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+             <script>
+              function sendEmail(){
+                var email=document.getElementById('email').value;
+                var mes=document.getElementById('box').value;
+                var body='email: '+ email +'<br/>'+mes
+                Email.send({
+          Host : "smtp.elasticemail.com",
+          Username : "ldinh2025@gmail.com",
+          Password : "D245AAE17B533DDE69206A9CA4A83409332B",
+          To : 'huyenlinh1485@gmail.com',
+          From : document.getElementById("email").value,
+           Subject : "New Contact",
+           Body : body
+                  }).then(
+          message => alert(message)
+             );
+              }
+             </script>
+          
+       
+    </div>
+    <footer>
+      <div class="home">
+        <a href="dashboard.php">Home</a>
+        <a href="register.php">CreateAccount</a>
+        <a href="index.php">Login</a>
+         <a href="manage-expense.php">Manage</a>
+        
+      </div>
+      <div class="contactfor">
+        <label>Contact</label>
+        <a href="linh.html">Linh</a>
+        <a href="Tiên.html">Tiên</a>
+        <a href="Thanh.html">Thanh</a>
+        <a href="Dat.html">Đạt</a>
+    </div>
+    <div class="social">
+      <a href="https://www.instagram.com/hlin.w_85/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/linliinnn/"><i class="fab fa-facebook"></i></a>
+    </div>
+    </footer>
+    <script >
+       var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+    </script> 
+</body>
+</html>

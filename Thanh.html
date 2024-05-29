@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/31bab5c154.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>Taskbar</title>
+</head>
+<body>
+    <style>
+        .taskbar{
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top:10px;
+            border-bottom-style: solid;
+            width:100%;
+            display: flex;
+            justify-content: end;
+            color:#5d4037;
+        }
+        .taskbar-item{
+            color: black;
+            cursor: pointer;
+            margin-right: 10px;
+            padding: 5px;
+        }
+        .taskbar-item:hover{
+            background-color: white;
+        }
+        body{
+            position: relative;
+            height: 100%;
+            margin: 0;
+            width: 100%;
+            background-color: #F2E5D9;
+        }
+        #up_background{
+            font-family:'Lobster',cursive;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            height: 70px;
+            background-color: #A18167;
+        }
+        #up_background div{
+            width: 75%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #up_background h1{
+        font-size: 25px;
+            margin: 0;
+        }
+        #left_background img{
+            width: 200px;
+        }
+        #left_background {
+            display: flex;
+            padding: 10px;
+            width: 25%;
+            height: 100%;
+            position: absolute;
+            top: 30px;
+            background-color: #D1B7A1;
+            flex-direction: column;
+            align-items: center;
+        }
+        #right_background{
+            display: flex;
+            justify-content: flex-end;
+        }
+        #right_background >  div{
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #right_background >div >div{
+            width: 90%;
+        }
+        .about_me p{
+            text-indent: 20px;
+            text-align: justify;
+        }
+
+        .column-left{
+            float: left;
+            width: 50%;
+        }
+        .column-right{
+            float: right;
+            width: 50%;
+        }
+
+        .in4,.co,.soc,.hobbie {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .information,.contct,.sm,.hobby {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            border-style: solid;
+            border-radius: 100%;
+            border-width: 1px;
+            width: 25px;
+            height: 25px;
+            margin-right: 5px;
+        }
+        .information svg,.contct svg,.sm svg,.hobby svg {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+        #left_background h2{
+            border: solid #5d4037;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            font-family: 'Lobster',cursive;
+        }
+        #right_background h2{
+            text-align: center;
+            background-color: #a1887f;
+            width:70%;
+            font-family: 'Lobster',cursive;
+        }
+        .about_me div{
+            display: flex;
+            justify-content: center;
+        }
+        #right_background .about_me h2{
+            width: fit-content;
+            padding: 0 10px;
+        }
+
+        form{
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 2vw 4vw;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+        form h3{
+            color: #555;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        form input, form textarea{
+            border:0;
+            margin: 10px 0;
+            padding: 20px;
+            outline: none;
+            background: #f5f5f5;
+            font-size: 16px;
+        }
+        form button{
+            padding: 15px;
+            background: #ff5361;
+            color: #fff;
+            font-size: 18px;
+            border:0;
+            outline: none;
+            cursor: pointer;
+            width: 150px;
+            margin: 20px auto 0;
+            border-radius: 30px;
+        }
+    </style>
+    <div id="container">
+        <div class="taskbar">
+            <div class="taskbar-item">Home</div>
+            <div class="taskbar-item">Help</div>
+        </div>
+    </div>
+    <div class="content">  
+        <div id="up_background">
+            <div>
+                <h1>NGUYEN NGOC THANH THANH</h1>
+            </div>
+        </div>
+        <div id="left_background">
+            <img src="img/Thanhtcn.jpg" alt="Thanh">
+                <div id="modal_content">
+                    <div class="info">
+                        <h2>INFO</h2>
+                            <div id="n" class="in4">
+                                <div id="user" class="information">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <div id="na">
+                                    <p>Nguyen Ngoc Thanh Thanh</p>
+                                </div>
+                            </div>
+        
+                            <div id="b" class="in4">
+                                <div id="cake" class="information">
+                                    <i class="fa-solid fa-cake-candles"></i>
+                                </div>
+                                <div id="bi">
+                                    <p>03 March 2003</p>
+                                </div>
+                            </div>
+        
+                            <div id="s" class="in4">
+                                <div id="venus" class="information">
+                                    <i class="fa-solid fa-venus-mars"></i>
+                                </div>
+                                <div id="se">
+                                    <p>Female</p>
+                                </div>
+                            </div>
+        
+                            <div id="nation" class="in4">
+                                <div id="earth" class="information">
+                                    <i class="fa-solid fa-earth-americas"></i>
+                                </div>
+                                <div id="nationality">
+                                    <p>Vietnamese</p>
+                                </div>
+                            </div>
+        
+                            <div id="l" class="in4">
+                                <div id="location" class="information">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div id="lo">
+                                    <p>Ho Chi Minh City</p>
+                                </div>
+                            </div>
+                    </div>
+        
+                    <div class="contact">
+                        <h2>CONTACT</h2>
+                        <div id="nu" class="co">
+                            <div id="phone" class="contct">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div id="number">
+                                <p>+84 829 996 393</p>
+                            </div>
+                        </div>
+                        
+                        <div id="e" class="co">
+                            <div id="envelope" class="contct">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div id="em">
+                                <p>ngocthanhthanh0303@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="social">
+                        <h2>SOCIAL MEDIA</h2>
+                        <div id="f" class="soc">
+                            <div id="facebook" class="sm">
+                                <i class="fa-brands fa-facebook"></i>
+                            </div>
+                            <div id="fb">
+                                <a href="https://www.facebook.com/ami.mai.37/" target="_blank">www.facebook.com/ami.mai.37</a><br>
+                            </div>
+                        </div>
+                        
+                        <div id="i" class="soc">
+                            <div id="instagram" class="sm">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div id="ig">
+                                <a href="https://www.instagram.com/_th_th.7/" target="_blank">www.instagram.com/_th_th.7</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="right_background">
+                <div>
+                    <div>
+                        <div id="down_background">
+                            <div class="about_me">
+                                <div><h2>ABOUT ME</h2></div>                        <p>Now I'm a sophomore and studying IT. Although I think this subject is quite fascinating, my
+                                    personality is shy and introverted, which sometimes makes it difficult for me to work in
+                                    groups and I'm also afraid to ask questions when I have problems. That is why I sometimes
+                                    find it difficult to fully understand complex courses.</p>
+                                <p>In addition, I often feel pressured to deal with difficult lessons and worry that my slower
+                                    learning pace might put me at a disadvantage compared to my peers. In fact, when I first
+                                    started my major, it was so difficult that I thought about dropping out.</p>
+                                <p>Thanks to the help of friends around me, who have always been behind me to encourage and help
+                                    me when I have difficulties, so I use that as motivation to study and strive to rise up
+                                    every day. As I continue to learn and grow, I find myself loving the subject more and more.
+                                    Actually, I have planned that when I finish the program and graduate, I will study abroad to
+                                    improve my education.</p>
+                                <p>In general, although I still face challenges from time to time, I believe that as long as I
+                                    try, persevere and be patient, I will definitely succeed on the path I choose.</p>
+                            </div>
+                            <div class="column-left">
+                                <div class="education">
+                                    <h2>EDUCATION</h2>
+                                    <li>2009-2014 Tan An Primary School</li>
+                                    <li>2014-2018 Thong Nhat Secondary School</li>
+                                    <li>2018-2021 Le Quy Don High School</li>
+                                    <li>2021-2025 Ho Chi Minh City University of Education</li>
+                                </div>
+                                <div class="language">
+                                    <h2>LANGUAGE</h2>
+                                    <li>Vietnamese</li>
+                                    <li>English</li>
+                                </div>
+                            </div>
+        
+                            <div class="column-right">
+                                <div class="hobbies">
+                                    <h2>HOBBIES</h2>
+                                    <div id="listenmusic" class="hobbie">
+                                        <div id="hphone" class="hobby">
+                                            <i class="fa-solid fa-headphones"></i>
+                                        </div>
+                                        <div id="listen">
+                                            <p> Listening to music</p>
+                                        </div>
+                                    </div>
+        
+                                    <div id="trvl" class="hobbie">
+                                        <div id="plane" class="hobby">
+                                            <i class="fa-solid fa-plane-departure"></i>
+                                        </div>
+                                        <div id="travel">
+                                            <p>Travelling</p>
+                                        </div>
+                                    </div>
+        
+                                    <div id="sht" class="hobbie">
+                                        <div id="gun" class="hobby">
+                                            <i class="fa-solid fa-gun"></i>
+                                        </div>
+                                        <div id="shoot">
+                                            <p>Shooting</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div id="mtc" class="hobbie">
+                                        <div id="motor" class="hobby">
+                                            <i class="fa-solid fa-motorcycle"></i>
+                                        </div>
+                                        <div id="motorcycle">
+                                            <p>Motorcycle racing</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <form onsubmit="sendEmail(); reset(); return false;">
+                                        <h3>GET IN TOUCH</h3>
+                                        <input type="text" id="name" placeholder="Your Name" required>
+                                        <input type="email" id="email" placeholder="Email id" required>
+                                        <input type="text" id="phone" placeholder="Phone no." required>
+                                        <textarea id="message" rows="4" placeholder="How can I help you?"></textarea>
+                                        <button type="submit">Send</button>
+                                    </form>
+                                    <script src="https://smtpjs.com/v3/smtp.js"></script>
+                                    <script>
+                                        function sendEmail(){
+                                            Email.send({
+                                                Host : "smtp.elasticemail.com",
+                                                Username : "ngocthanhthanh0303@gmail.com",
+                                                Password : "wqoyocnarphpiubo",
+                                                To : 'thenthen0303@gmail.com',
+                                                From : document.getElementById("email").value,
+                                                Subject : "New Contact Form Enquiry",
+                                                Body : "Name" + document.getElementById("name").value
+                                                        + "<br> Email:" + document.getElementById("email").value
+                                                        + "<br> Phone no:" + document.getElementById("phone").value
+                                                        + "<br> Message:" + document.getElementById("message").value
+                                            }).then(
+                                            message => alert("Message Sent Successfully")
+                                            );
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+</body>
+</html>
